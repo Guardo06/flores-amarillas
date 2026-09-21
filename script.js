@@ -97,7 +97,7 @@ botonCarta.addEventListener(
 
 function escribirCarta() {
 
-    const mensaje = `Mi bebé ❤️‍🩹,
+    const mensaje = `Mi cielito 💗,
 
 Hoy quise hacer algo diferente para ti.
 
@@ -140,7 +140,7 @@ y que se siente muy feliz de poder llamarte:
 
 Mi bebé. 🌻❤️
 
-Te quiero muchísimo. ❤️`;
+Te quiero muchísimo cielito lindo. 💗`;
 
 
     let indice = 0;
@@ -302,7 +302,7 @@ function crearPetalo() {
 
         "🌻",
 
-        "❤️‍🩹"
+        "💗"
 
     ];
 
@@ -383,7 +383,10 @@ function explosionFinal() {
 
         "💕",
 
-        "🌻"
+        "🌻",
+       
+        "💗"
+       
 
     ];
 
