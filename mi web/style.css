@@ -1,0 +1,1089 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #4a3005,
+            #1b1002 60%,
+            #090602
+        );
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================
+   PANTALLAS
+===================================== */
+
+.pantalla {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(1.08);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease,
+
+        visibility 1s;
+
+    overflow-y: auto;
+
+}
+
+
+.pantalla.activa {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+
+}
+
+
+/* =====================================
+   INICIO
+===================================== */
+
+.inicio-container {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    text-align: center;
+
+    padding: 50px 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    backdrop-filter:
+        blur(15px);
+
+    border:
+        1px solid
+        rgba(255,212,59,.18);
+
+    box-shadow:
+        0 0 60px
+        rgba(255,193,7,.12);
+
+}
+
+
+.flor-principal {
+
+    font-size: 115px;
+
+    margin-bottom: 20px;
+
+    animation:
+        flotar 3s ease-in-out infinite;
+
+}
+
+
+.inicio-container h1 {
+
+    font-size: 46px;
+
+    color: #ffd43b;
+
+    margin-bottom: 20px;
+
+}
+
+
+.inicio-container p {
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =====================================
+   BOTONES
+===================================== */
+
+button {
+
+    border: none;
+
+    padding: 16px 30px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd43b,
+            #ffb703
+        );
+
+    color: #3a2600;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
+
+    box-shadow:
+        0 8px 25px
+        rgba(255,193,7,.25);
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
+
+    box-shadow:
+        0 12px 35px
+        rgba(255,193,7,.45);
+
+}
+
+
+button:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+/* =====================================
+   PANTALLA FLORES
+===================================== */
+
+.sorpresa-container {
+
+    width: 90%;
+
+    max-width: 750px;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+}
+
+
+.flores {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.flores span {
+
+    font-size: 60px;
+
+    animation:
+        florMovimiento 2s
+        ease-in-out infinite;
+
+}
+
+
+.flores span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.flores span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.flores span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.flores span:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.flores span:nth-child(5) {
+    animation-delay: .8s;
+}
+
+
+.sorpresa-container h2 {
+
+    font-size: 40px;
+
+    color: #ffd43b;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+
+}
+
+
+.sorpresa-container p {
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+}
+
+
+.destacado {
+
+    color: #ffe477;
+
+    font-size: 21px !important;
+
+    margin-bottom: 30px !important;
+
+}
+
+
+/* =====================================
+   CARTA
+===================================== */
+
+.carta-container {
+
+    width: 92%;
+
+    max-width: 680px;
+
+    padding: 45px 40px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff9e1,
+            #fff0a8
+        );
+
+    color: #493500;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.55);
+
+    text-align: center;
+
+}
+
+
+.sobre {
+
+    font-size: 65px;
+
+    animation:
+        latido 2s infinite;
+
+}
+
+
+.carta-container h2 {
+
+    color: #a46d00;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.linea {
+
+    width: 90px;
+
+    height: 3px;
+
+    background: #d4a017;
+
+    margin:
+        0 auto 25px;
+
+}
+
+
+.texto-carta {
+
+    min-height: 310px;
+
+    text-align: left;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    white-space: pre-line;
+
+}
+
+
+.texto-carta::after {
+
+    content: "|";
+
+    animation:
+        cursor .8s infinite;
+
+}
+
+
+.firma {
+
+    margin-top: 15px;
+
+    opacity: 0;
+
+    transition:
+        opacity 1s ease;
+
+}
+
+
+.firma.visible {
+
+    opacity: 1;
+
+}
+
+
+.firma span {
+
+    font-weight: bold;
+
+    color: #a46d00;
+
+}
+
+
+#botonMomentos {
+
+    margin-top: 25px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 1s ease;
+
+}
+
+
+#botonMomentos.visible {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+/* =====================================
+   TARJETAS
+===================================== */
+
+.momentos-container {
+
+    width: 95%;
+
+    max-width: 1000px;
+
+    text-align: center;
+
+}
+
+
+.momentos-container h2 {
+
+    font-size: 42px;
+
+    color: #ffd43b;
+
+    margin-bottom: 15px;
+
+}
+
+
+.intro-momentos {
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
+}
+
+
+.tarjetas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.tarjeta {
+
+    padding: 30px 20px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,212,59,.15);
+
+    backdrop-filter:
+        blur(10px);
+
+    transition:
+        transform .35s,
+        box-shadow .35s;
+
+}
+
+
+.tarjeta:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(255,193,7,.15);
+
+}
+
+
+.icono {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.tarjeta h3 {
+
+    color: #ffd43b;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.tarjeta p {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #eeeeee;
+
+}
+
+
+/* =====================================
+   RAMO FINAL
+===================================== */
+
+.final-container {
+
+    width: 90%;
+
+    max-width: 750px;
+
+    text-align: center;
+
+}
+
+
+.ramo {
+
+    margin-bottom: 20px;
+
+}
+
+
+.flores-ramo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 3px;
+
+}
+
+
+.flores-ramo span {
+
+    font-size: 65px;
+
+    display: inline-block;
+
+    animation:
+        ramoFlota 3s
+        ease-in-out infinite;
+
+}
+
+
+.flores-ramo span:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.flores-ramo span:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.flores-ramo span:nth-child(3) {
+    animation-delay: .5s;
+}
+
+.flores-ramo span:nth-child(4) {
+    animation-delay: .7s;
+}
+
+.flores-ramo span:nth-child(5) {
+    animation-delay: .9s;
+}
+
+.flores-ramo span:nth-child(6) {
+    animation-delay: 1.1s;
+}
+
+.flores-ramo span:nth-child(7) {
+    animation-delay: 1.3s;
+}
+
+
+.tallos {
+
+    font-size: 35px;
+
+    letter-spacing: -8px;
+
+    margin-top: -15px;
+
+}
+
+
+.final-container h2 {
+
+    font-size: 48px;
+
+    color: #ffd43b;
+
+    margin-bottom: 25px;
+
+}
+
+
+.frase-final {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    color: #f5f5f5;
+
+}
+
+
+.frase-especial {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #ffe477;
+
+    margin:
+        30px 0 25px;
+
+}
+
+
+.corazones {
+
+    font-size: 30px;
+
+    letter-spacing: 8px;
+
+    animation:
+        latido 2s infinite;
+
+}
+
+
+.final-grande {
+
+    font-size: 30px;
+
+    color: #ffd43b;
+
+    font-weight: bold;
+
+    margin:
+        25px 0;
+
+}
+
+
+.firma-final {
+
+    color: #ddd;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+.firma-final strong {
+
+    color: #ffd43b;
+
+    font-size: 22px;
+
+}
+
+
+/* =====================================
+   PÉTALOS
+===================================== */
+
+#petalos {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+}
+
+
+.petalo {
+
+    position: absolute;
+
+    top: -50px;
+
+    animation:
+        caer linear forwards;
+
+}
+
+
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+@keyframes flotar {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-18px)
+            rotate(3deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+
+    }
+
+}
+
+
+@keyframes florMovimiento {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(5deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+}
+
+
+@keyframes latido {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.12);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes caer {
+
+    0% {
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes cursor {
+
+    0%,
+    50% {
+
+        opacity: 1;
+
+    }
+
+    51%,
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes ramoFlota {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-2deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(2deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-2deg);
+
+    }
+
+}
+
+
+/* =====================================
+   CELULARES
+===================================== */
+
+@media (max-width: 700px) {
+
+    .pantalla {
+
+        padding: 15px;
+
+    }
+
+
+    .inicio-container {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .flor-principal {
+
+        font-size: 85px;
+
+    }
+
+
+    .inicio-container h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .inicio-container p {
+
+        font-size: 17px;
+
+    }
+
+
+    .flores span {
+
+        font-size: 40px;
+
+    }
+
+
+    .sorpresa-container h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .sorpresa-container p {
+
+        font-size: 17px;
+
+    }
+
+
+    .carta-container {
+
+        padding: 30px 20px;
+
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+    }
+
+
+    .carta-container h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .texto-carta {
+
+        font-size: 16px;
+
+        min-height: 320px;
+
+    }
+
+
+    .tarjetas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .momentos-container h2 {
+
+        font-size: 31px;
+
+    }
+
+
+    .tarjeta {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .flores-ramo span {
+
+        font-size: 40px;
+
+    }
+
+
+    .tallos {
+
+        font-size: 25px;
+
+    }
+
+
+    .final-container h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .frase-final {
+
+        font-size: 17px;
+
+    }
+
+
+    .frase-especial {
+
+        font-size: 21px;
+
+    }
+
+
+    .final-grande {
+
+        font-size: 24px;
+
+    }
+
+}
